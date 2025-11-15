@@ -17,7 +17,7 @@ public class AddNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_note2); // <- ČIA SVARBIAUSIA
+        setContentView(R.layout.activity_add_note2);
 
         editName = findViewById(R.id.editName);
         editContent = findViewById(R.id.editContent);
@@ -48,6 +48,6 @@ public class AddNoteActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Note saved!", Toast.LENGTH_SHORT).show();
 
-        finish(); // grįžta į MainActivity
+        finish();
     }
 }

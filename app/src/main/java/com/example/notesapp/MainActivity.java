@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity {
         listNotes.setAdapter(adapter);
     }
 
-    // --- Meniu sukūrimas ---
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
     }
 
-    // --- Meniu veiksmų logika ---
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

@@ -43,7 +43,7 @@ public class DeleteNoteActivity extends AppCompatActivity {
         ArrayList<String> noteNames = new ArrayList<>();
 
         for (Map.Entry<String, ?> entry : allNotes.entrySet()) {
-            noteNames.add(entry.getKey()); // only the titles
+            noteNames.add(entry.getKey());
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
@@ -67,6 +67,6 @@ public class DeleteNoteActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Note deleted!", Toast.LENGTH_SHORT).show();
 
-        finish(); // go back to MainActivity
+        finish();
     }
 }
