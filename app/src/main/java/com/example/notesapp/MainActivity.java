@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 
 
@@ -75,10 +77,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (id == R.id.menuDelete) {
+
+            // Patikrinam ar yra ką trinti
+            SharedPreferences prefs = getSharedPreferences("notes", MODE_PRIVATE);
+
+            if (prefs.getAll().isEmpty()) {
+                Toast.makeText(this, "No notes made", Toast.LENGTH_SHORT).show();
+                return true; // neleidžiam eiti į delete ekraną
+            }
+
+            // Jei yra duomenų, leidžiam eiti į DeleteNoteActivity
             Intent i = new Intent(this, DeleteNoteActivity.class);
             startActivity(i);
             return true;
         }
+
+
 
         return super.onOptionsItemSelected(item);
     }

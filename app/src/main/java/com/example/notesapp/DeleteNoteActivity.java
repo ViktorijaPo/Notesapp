@@ -69,4 +69,6 @@ public class DeleteNoteActivity extends AppCompatActivity {
 
         finish();
     }
+
+
 }
